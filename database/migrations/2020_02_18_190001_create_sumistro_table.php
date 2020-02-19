@@ -14,7 +14,10 @@ class CreateSumistroTable extends Migration
     public function up()
     {
         Schema::create('sumistro', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->string('rq');
+            $table->string('tipo');
+            $table->string('referencia');
+            $table->string('estado');
             $table->timestamps();
         });
     }

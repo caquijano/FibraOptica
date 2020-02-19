@@ -15,6 +15,8 @@ class CreateCierreTable extends Migration
     {
         Schema::create('cierre', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->date('fecha_activacion');
+            $table->text('observacion');
             $table->timestamps();
         });
     }

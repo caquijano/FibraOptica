@@ -15,6 +15,10 @@ class CreateAprovisionamientosTable extends Migration
     {
         Schema::create('aprovisionamientos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->date('fecha_inicio');
+            $table->date('fecha_esperada');
+            $table->string('estado');
+            $table->text('observacion');
             $table->timestamps();
         });
     }

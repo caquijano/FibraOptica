@@ -15,6 +15,10 @@ class CreateInstalacionsTable extends Migration
     {
         Schema::create('instalacions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->date('fecha_inicio');
+            $table->date('fecha_esperada');
+            $table->string('estado');
+            $table->text('observacion');
             $table->timestamps();
         });
     }

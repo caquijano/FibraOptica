@@ -14,11 +14,13 @@ class CreateElectrificadorasTable extends Migration
     public function up()
     {
         Schema::create('electrificadoras', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->date('fecha_inicio');
             $table->date('fecha_esperada');
             $table->string('estado');
             $table->text('observacion');
+            $table->integer('id_servicio')->unsigned();
+            $table->foreign('id_servicio')->references('id')->on('servicios')->onDelete('cascade');
             $table->timestamps();
         });
     }

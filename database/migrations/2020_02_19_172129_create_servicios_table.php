@@ -14,6 +14,7 @@ class CreateServiciosTable extends Migration
     public function up()
     {
         Schema::create('servicios', function (Blueprint $table) {
+            $table->Increments('id');
             $table->string('sid');
             $table->string('servicio');
             $table->string('tipo');
@@ -38,6 +39,10 @@ class CreateServiciosTable extends Migration
             $table->integer('obra_civil');
             $table->string('observacion_obra');
             $table->date('fecha_entrega_tercero');
+            $table->integer('id_oportunidad')->unsigned();
+            $table->foreign('id_oportunidad')->references('id')->on('oportunidads')->onDelete('cascade');
+            $table->integer('id_suministro')->unsigned();
+            $table->foreign('id_suministro')->references('id')->on('suministros')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -14,6 +14,7 @@ class CreateSuministrosTable extends Migration
     public function up()
     {
         Schema::create('suministros', function (Blueprint $table) {
+            $table->Increments('id');
             $table->string('rq');
             $table->string('tipo');
             $table->string('referencia');

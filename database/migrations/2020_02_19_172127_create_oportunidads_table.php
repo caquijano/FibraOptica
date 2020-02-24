@@ -14,14 +14,18 @@ class CreateOportunidadsTable extends Migration
     public function up()
     {
         Schema::create('oportunidads', function (Blueprint $table) {
-            $table->string('id');
+            $table->Increments('id');
+            $table->string('oportunidad');
             $table->string('comercial');
             $table->string('ingeniero_preventa');
             $table->date('fecha_inicio');
             $table->date('fecha_compromiso');
             $table->string('prioridad');
             $table->date('compromiso_activacion');
+            $table->integer('id_cliente')->unsigned();
+            $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade');
             $table->timestamps();
+            
         });
     }
 

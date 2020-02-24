@@ -68953,23 +68953,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _OportunidadForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./OportunidadForm */ "./resources/js/components/OportunidadForm.js");
+
 
 
 
 function Example() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-header"
-  }, "Example Component"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-body"
-  }, "I'm an example component!")))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OportunidadForm__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OportunidadForm__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OportunidadForm__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OportunidadForm__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Example);
@@ -68977,6 +68969,92 @@ function Example() {
 if (document.getElementById('example')) {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Example, null), document.getElementById('example'));
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/OportunidadForm.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/OportunidadForm.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var OportunidadForm = function OportunidadForm() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card",
+    style: {
+      width: '18rem:=;'
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-1"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "images/SinFoto.jpg",
+    className: "card-img-top",
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "card-title"
+  }, "Cliente: Profamilia"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "card-text"
+  }, "Opotunidad: 20802 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "card-text"
+  }, "SID: 1151599 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "card-text"
+  }, "Tipo: Nuevo ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "card-text"
+  }, "Ciudad: Bogota "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "card-title"
+  }, "Direccion: Data Center Torre Central ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-sm-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "card-text"
+  }, "Telefono: 867 2122 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "card-text"
+  }, " BW: 100 Mbps Medio: Fibra"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "progress"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "progress-bar",
+    role: "progressbar",
+    style: {
+      width: '0%'
+    },
+    "aria-valuenow": "25",
+    "aria-valuemin": "0",
+    "aria-valuemax": "100"
+  }, "50%")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    "class": "list-group list-group-horizontal-md"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "list-group-item",
+    type: "button"
+  }, "Factibilidad"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "list-group-item",
+    type: "button"
+  }, "Electrificadora"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "list-group-item",
+    type: "button"
+  }, "Equipos"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "list-group-item",
+    type: "button"
+  }, "Instalacion"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "list-group-item",
+    type: "button"
+  }, "Aprovisionamiento")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (OportunidadForm);
 
 /***/ }),
 

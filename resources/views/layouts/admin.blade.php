@@ -437,5 +437,7 @@
 <script src="{{ asset('dist/js/pages/dashboard.js') }}" defer></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('dist/js/demo.js') }}" defer></script>
+
+<script type="text/javascript" src="/js/app.js"></script>
 </body>
 </html>

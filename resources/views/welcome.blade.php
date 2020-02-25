@@ -89,7 +89,7 @@
                     
                     <img class="logogrande" src="../../images/logo.svg">
                 </div>
-
+               
                 <div class="links">
                     <a href="https://laravel.com/docs">Nosotros</a>
                     <a href="https://laracasts.com">Cobertura</a>
@@ -103,4 +103,5 @@
             </div>
         </div>
     </body>
+    
 </html>

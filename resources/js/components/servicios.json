@@ -1,0 +1,40 @@
+{
+    "servicios":[
+        {
+            "sid": "20001",
+            "servicio":"internet",
+            "tipo":"1",
+            "medio":"fibra",
+            "bw":"200",
+            "direccion":"Cra 7 # 7-07",
+            "ciudad":"Bogota",
+            "telefono":"8673333",
+            "descripcion":"lorem impsum"
+            
+        },
+        {
+            "sid": "20002",
+            "servicio":"telefono",
+            "tipo":"2",
+            "medio":"fibra",
+            "bw":"300",
+            "direccion":"Cra 5 # 2-02",
+            "ciudad":"Bogota",
+            "telefono":"8672122",
+            "descripcion":"lorem impsum2"
+            
+        },
+        {
+            "sid": "20003",
+            "servicio":"interne3",
+            "tipo":"3",
+            "medio":"fibra",
+            "bw":"400",
+            "direccion":"Cll 8 # 81-02",
+            "ciudad":"Medellin",
+            "telefono":"8674452",
+            "descripcion":"lorem impsum3"
+            
+        }
+    ]
+}

@@ -212,7 +212,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-              <a href="{{ route('nuevaoportunidad')}}" class="nav-link">
+              <a href="{{ route('oportunidad')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Oportunidad</p>
                 </a>

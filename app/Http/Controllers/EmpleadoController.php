@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cliente;
 use App\Empleado;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -16,7 +17,8 @@ class EmpleadoController extends Controller
     public function index()
     {
         $empleados = Empleado::all();
-        return view('createoportunidad', compact('empleados'));
+        $clientes = Cliente::all();
+        return view('createoportunidad', compact('empleados', 'clientes'));
 
         
 
@@ -29,7 +31,7 @@ class EmpleadoController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**

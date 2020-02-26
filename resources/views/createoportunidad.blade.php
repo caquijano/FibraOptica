@@ -40,10 +40,12 @@
         <div class="col-sm-6 form-group">
           <label for="cliente">Cliente</label>
           <div class="input-group">
-            <select class="custom-select" name="id_cliente" id="">
-                <option value="1">1</option>
+            <select class="custom-select" name="cliente" id="">
+                <option value=""></option>
+            @foreach ($clientes as $empleado)
+                 <option value="{{ $empleado['id'] }}">{{ $empleado['nombre'] }}</option>
+                @endforeach
             </select>
-            
             <button type="button" class="btn btn-success input-group-text" data-toggle="modal" data-target="#cliente">
                 <i class="far fa fa-user-plus"></i>
             </button>

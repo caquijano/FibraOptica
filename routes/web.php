@@ -1,4 +1,6 @@
 <?php
+
+use App\Empleado;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,4 +30,4 @@ Route::get('/servicio', 'ServicioController@index')->name('servicio');
 Route::get('/nuevaoportunidad', 'OportunidadController@create')->name('nuevaoportunidad');
 Route::post('/createoportunidad', 'OportunidadController@store')->name('createoportunidad');
 Route::post('/agregarcliente', 'ClienteController@store')->name('agregarcliente');
-Route::resource('empleados', 'EmpleadoController');
+Route::get('/oportunidad', 'EmpleadoController@index')->name('oportunidad');

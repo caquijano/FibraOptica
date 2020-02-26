@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Cliente;
+use App\Http\Requests;
+use PhpParser\Node\Expr\New_;
 
 class ClienteController extends Controller
 {
@@ -13,7 +16,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return view('cliente');
+
     }
 
     /**
@@ -23,7 +26,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
@@ -34,7 +37,15 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $clienteAgregar = New Cliente;
+        $clienteAgregar->nit = $request->nit;
+        $clienteAgregar->nombre = $request->nombre;
+        $clienteAgregar->direccion = $request->direccion;
+        $clienteAgregar->encargado = $request->encargado;
+        $clienteAgregar->telefono = $request->telefono;
+        $clienteAgregar->email = $request->email;
+        $clienteAgregar->save();
+        return back()->with('agregarcliente', 'el cliente se ha creado satisfactoriamente');
     }
 
     /**

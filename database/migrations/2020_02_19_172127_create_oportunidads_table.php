@@ -21,7 +21,7 @@ class CreateOportunidadsTable extends Migration
             $table->date('fecha_inicio');
             $table->date('fecha_compromiso');
             $table->string('prioridad');
-            $table->date('compromiso_activacion');
+            $table->string('compromiso_activacion');
             $table->integer('id_cliente')->unsigned();
             $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade');
             $table->timestamps();

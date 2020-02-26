@@ -199,10 +199,6 @@
           <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
-              <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
-              </p>
             </a>
           </li>
           <li class="nav-item has-treeview">
@@ -216,9 +212,9 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+              <a href="{{ route('nuevaoportunidad')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Top Navigation</p>
+                  <p>Oportunidad</p>
                 </a>
               </li>
               <li class="nav-item">

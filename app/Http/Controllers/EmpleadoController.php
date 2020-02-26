@@ -2,19 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Empleado;
 use Illuminate\Http\Request;
-use App\Oportunidad;
+use App\Http\Requests;
 
-class OportunidadController extends Controller
+class EmpleadoController extends Controller
 {
-     /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $empleados = Empleado::all();
+        return view('createoportunidad', compact('empleados'));
+
+        
+
     }
 
     /**
@@ -24,7 +29,7 @@ class OportunidadController extends Controller
      */
     public function create()
     {
-        return view('createoportunidad');
+        //
     }
 
     /**
@@ -35,27 +40,16 @@ class OportunidadController extends Controller
      */
     public function store(Request $request)
     {
-        $crearOportunidad = New Oportunidad();
-        $crearOportunidad->oportunidad = $request->oportunidad;
-        $crearOportunidad->comercial = $request->comercial;
-        $crearOportunidad->ingeniero_preventa = $request->ingeniero_preventa;
-        $crearOportunidad->fecha_inicio = $request->fecha_inicio;
-        $crearOportunidad->fecha_compromiso = $request->fecha_compromiso;
-        $crearOportunidad->prioridad = $request->prioridad;
-        $crearOportunidad->compromiso_activacion = $request->compromiso_activacion;
-        $crearOportunidad->prioridad = $request->prioridad;
-        $crearOportunidad->id_cliente = $request->id_cliente;
-        $crearOportunidad->save();
-        return back()->with('crearoportunidad', 'La oportunidad se ha creado satisfactoriamente');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Empleado  $empleado
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Empleado $empleado)
     {
         //
     }
@@ -63,10 +57,10 @@ class OportunidadController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Empleado  $empleado
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Empleado $empleado)
     {
         //
     }
@@ -75,10 +69,10 @@ class OportunidadController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Empleado  $empleado
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Empleado $empleado)
     {
         //
     }
@@ -86,10 +80,10 @@ class OportunidadController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Empleado  $empleado
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Empleado $empleado)
     {
         //
     }

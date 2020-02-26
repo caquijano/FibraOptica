@@ -25,4 +25,7 @@ Route::get('/testhome', 'HomeController@test')->name('testhome');
 Route::get('/test', 'TestController@index')->name('test');
 Route::get('/about', 'TestController@about')->name('about');
 Route::get('/servicio', 'ServicioController@index')->name('servicio');
-Route::get('/createoportunidad', 'OportunidadController@create')->name('createoportunidad');
+Route::get('/nuevaoportunidad', 'OportunidadController@create')->name('nuevaoportunidad');
+Route::post('/createoportunidad', 'OportunidadController@store')->name('createoportunidad');
+Route::post('/agregarcliente', 'ClienteController@store')->name('agregarcliente');
+Route::resource('empleados', 'EmpleadoController');

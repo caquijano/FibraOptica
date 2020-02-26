@@ -2,21 +2,21 @@ import React from 'react'
 
 const InstalacionModal = () => (
 
-    <div class="modal fade" id="instalacion" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Instalacion</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <div className="modal fade" id="instalacion" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div className="modal-dialog" role="document">
+        <div className="modal-content">
+        <div className="modal-header">
+            <h5 className="modal-title" id="staticBackdropLabel">Instalacion</h5>
+            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <div class="modal-body">
+        <div className="modal-body">
             ...
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
+        <div className="modal-footer">
+            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" className="btn btn-primary">Understood</button>
         </div>
         </div>
     </div>

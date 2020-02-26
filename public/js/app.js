@@ -68893,6 +68893,20 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./components/Example */ "./resources/js/components/Example.js");
 
+__webpack_require__(/*! ./components/AprovisionamientoModal */ "./resources/js/components/AprovisionamientoModal.js");
+
+__webpack_require__(/*! ./components/ElectrificadoraModal */ "./resources/js/components/ElectrificadoraModal.js");
+
+__webpack_require__(/*! ./components/EquiposModal */ "./resources/js/components/EquiposModal.js");
+
+__webpack_require__(/*! ./components/FactibilidadModal */ "./resources/js/components/FactibilidadModal.js");
+
+__webpack_require__(/*! ./components/InstalacionModal */ "./resources/js/components/InstalacionModal.js");
+
+__webpack_require__(/*! ./components/OportunidadForm */ "./resources/js/components/OportunidadForm.js");
+
+__webpack_require__(/*! ./components/OportunidadList */ "./resources/js/components/OportunidadList.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -69132,7 +69146,16 @@ var _servicios_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webp
 /* harmony import */ var _EquiposModal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./EquiposModal */ "./resources/js/components/EquiposModal.js");
 /* harmony import */ var _InstalacionModal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./InstalacionModal */ "./resources/js/components/InstalacionModal.js");
 /* harmony import */ var _AprovisionamientoModal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./AprovisionamientoModal */ "./resources/js/components/AprovisionamientoModal.js");
+/* harmony import */ var _OportunidadList_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./OportunidadList.js */ "./resources/js/components/OportunidadList.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -69142,9 +69165,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -69160,37 +69183,62 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+var baseUrl = "http://127.0.0.1:8000/api/";
+
 var Example =
 /*#__PURE__*/
 function (_Component) {
   _inherits(Example, _Component);
 
-  function Example() {
+  function Example(props) {
     var _this;
 
     _classCallCheck(this, Example);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Example).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Example).call(this, props));
     _this.state = {
-      servicios: _servicios_json__WEBPACK_IMPORTED_MODULE_2__["servicios"]
+      //servicios
+      servicios: []
     };
+    _this.handleAddServicio = _this.handleAddServicio.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Example, [{
+    key: "handleAddServicio",
+    value: function handleAddServicio(servicio) {
+      this.setState({
+        servicios: [].concat(_toConsumableArray(this.state.servicios), [servicio])
+      });
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios.get(baseUrl + 'servicio/list').then(function (response) {
+        _this2.setState({
+          servicios: response.data
+        });
+      })["catch"](function (error) {
+        alert("Error " + error);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      var servicios = this.state.servicios.map(function (servicio, i) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "card"
-        }, servicio.medio);
-      });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "Example"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OportunidadList_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        onAddServicio: this.handleAddServicio
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OportunidadForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
         servicios: this.state.servicios
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        "class": "list-group list-group-horizontal-md"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "list-group list-group-horizontal-md"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
         className: "btn list-group-item",
@@ -69216,7 +69264,7 @@ function (_Component) {
         className: "btn list-group-item",
         "data-toggle": "modal",
         "data-target": "#aprovisionamiento"
-      }, " Aprovisionamiento")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FactibilidadModal__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ElectrificadoraModal__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EquiposModal__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InstalacionModal__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AprovisionamientoModal__WEBPACK_IMPORTED_MODULE_8__["default"], null));
+      }, " Aprovisionamiento")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FactibilidadModal__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ElectrificadoraModal__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EquiposModal__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InstalacionModal__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AprovisionamientoModal__WEBPACK_IMPORTED_MODULE_8__["default"], null)));
     }
   }]);
 
@@ -69246,7 +69294,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var FactibilidadModal = function FactibilidadModal() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal fade",
+    className: "modal fade",
     id: "factibilidad",
     "data-backdrop": "static",
     tabindex: "-1",
@@ -69254,33 +69302,33 @@ var FactibilidadModal = function FactibilidadModal() {
     "aria-labelledby": "staticBackdropLabel",
     "aria-hidden": "true"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-dialog",
+    className: "modal-dialog",
     role: "document"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-content"
+    className: "modal-content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-header"
+    className: "modal-header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    "class": "modal-title",
+    className: "modal-title",
     id: "staticBackdropLabel"
   }, "Modal title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "class": "close",
+    className: "close",
     "data-dismiss": "modal",
     "aria-label": "Close"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     "aria-hidden": "true"
   }, "\xD7"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-body"
+    className: "modal-body"
   }, "..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-footer"
+    className: "modal-footer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "class": "btn btn-secondary",
+    className: "btn btn-secondary",
     "data-dismiss": "modal"
   }, "Close"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "class": "btn btn-primary"
+    className: "btn btn-primary"
   }, "Understood")))));
 };
 
@@ -69303,7 +69351,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var InstalacionModal = function InstalacionModal() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal fade",
+    className: "modal fade",
     id: "instalacion",
     "data-backdrop": "static",
     tabindex: "-1",
@@ -69311,33 +69359,33 @@ var InstalacionModal = function InstalacionModal() {
     "aria-labelledby": "staticBackdropLabel",
     "aria-hidden": "true"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-dialog",
+    className: "modal-dialog",
     role: "document"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-content"
+    className: "modal-content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-header"
+    className: "modal-header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    "class": "modal-title",
+    className: "modal-title",
     id: "staticBackdropLabel"
   }, "Instalacion"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "class": "close",
+    className: "close",
     "data-dismiss": "modal",
     "aria-label": "Close"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     "aria-hidden": "true"
   }, "\xD7"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-body"
+    className: "modal-body"
   }, "..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-footer"
+    className: "modal-footer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "class": "btn btn-secondary",
+    className: "btn btn-secondary",
     "data-dismiss": "modal"
   }, "Close"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "class": "btn btn-primary"
+    className: "btn btn-primary"
   }, "Understood")))));
 };
 
@@ -69373,7 +69421,12 @@ var OportunidadForm = function OportunidadForm(_ref) {
       src: "images/SinFoto.jpg",
       className: "card-img-top",
       alt: ""
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "badge badge-danger navbar-badge"
+    }, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "button",
+      "class": "btn btn-success"
+    }, "Success")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "col-sm-3"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
       className: "card-title"
@@ -69382,22 +69435,22 @@ var OportunidadForm = function OportunidadForm(_ref) {
     }, "Opotunidad: 20802 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "col-sm-2"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-      className: "card-text"
+      className: "card-text "
     }, servicio.sid, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
       className: "card-text"
-    }, "Tipo: Nuevo ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "Tipo: ", servicio.tipo, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "col-sm-3"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
       className: "card-text"
-    }, "Ciudad: Bogota "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    }, "Ciudad: ", servicio.ciudad), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
       className: "card-title"
-    }, "Direccion: Data Center Torre Central ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "Direccion: ", servicio.direccion, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "col-sm-3"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
       className: "card-text"
-    }, "Telefono: 867 2122 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    }, "Telefono: ", servicio.telefono, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
       className: "card-text"
-    }, " BW: 100 Mbps Medio: Fibra"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, " BW: ", servicio.bw, " Medio:", servicio.medio))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "progress"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "progress-bar",
@@ -69416,6 +69469,194 @@ var OportunidadForm = function OportunidadForm(_ref) {
 
 /***/ }),
 
+/***/ "./resources/js/components/OportunidadList.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/OportunidadList.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var OportunidadList =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(OportunidadList, _Component);
+
+  function OportunidadList() {
+    var _this;
+
+    _classCallCheck(this, OportunidadList);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(OportunidadList).call(this));
+    _this.state = {
+      sid: '',
+      tipo: '',
+      medio: '',
+      bw: '',
+      direccion: '',
+      ciudad: '',
+      telefono: '',
+      descripcion: 'lorem'
+    };
+    _this.handleInputChange = _this.handleInputChange.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(OportunidadList, [{
+    key: "handleInputChange",
+    value: function handleInputChange(e) {
+      var _e$target = e.target,
+          value = _e$target.value,
+          name = _e$target.name;
+      this.setState(_defineProperty({}, name, value));
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      this.props.onAddServicio(this.state);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "card",
+        onSubmit: this.handleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row m-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "images/SinFoto.jpg",
+        className: "card-img-top",
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "badge badge-danger navbar-badge"
+      }, "3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group col-sm-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+        className: ""
+      }, "Profamilia")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: ""
+      }, "Opotunidad: 20802 "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group col-sm-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        name: "sid",
+        className: "form-control",
+        placeholder: "SID",
+        onChange: this.handleInputChange
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row mt-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "",
+        name: "tipo",
+        className: "form-control",
+        placeholder: "Tipo",
+        onChange: this.handleInputChange
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group col-sm-2 ml-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        name: "ciudad",
+        className: "form-control",
+        placeholder: "Ciudad",
+        onChange: this.handleInputChange
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row mt-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        name: "direccion",
+        className: "form-control",
+        placeholder: "Direccion",
+        onChange: this.handleInputChange
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group col-sm-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        name: "telefono",
+        className: "form-control",
+        placeholder: "Telefono",
+        onChange: this.handleInputChange
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row mt-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        name: "bw",
+        className: "form-control",
+        placeholder: "BW",
+        onChange: this.handleInputChange
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        name: "medio",
+        className: "form-control",
+        placeholder: "Medio",
+        onChange: this.handleInputChange
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group col-sm-1 "
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row ml-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "submit",
+        className: "btn btn-primary mb-2"
+      }, "+")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row ml-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "submit",
+        className: "btn"
+      }, "Crear")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row accent-danger"
+      }));
+    }
+  }]);
+
+  return OportunidadList;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (OportunidadList);
+
+/***/ }),
+
 /***/ "./resources/js/components/servicios.json":
 /*!************************************************!*\
   !*** ./resources/js/components/servicios.json ***!
@@ -69423,7 +69664,7 @@ var OportunidadForm = function OportunidadForm(_ref) {
 /*! exports provided: servicios, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"servicios\":[{\"sid\":\"20001\",\"servicio\":\"internet\",\"tipo\":\"1\",\"medio\":\"fibra\",\"bw\":\"200\",\"direccion\":\"Cra 7 # 7-07\",\"ciudad\":\"Bogota\",\"telefono\":\"8673333\",\"descripcion\":\"lorem impsum\"},{\"sid\":\"20002\",\"servicio\":\"telefono\",\"tipo\":\"2\",\"medio\":\"fibra\",\"bw\":\"300\",\"direccion\":\"Cra 5 # 2-02\",\"ciudad\":\"Bogota\",\"telefono\":\"8672122\",\"descripcion\":\"lorem impsum2\"},{\"sid\":\"20003\",\"servicio\":\"interne3\",\"tipo\":\"3\",\"medio\":\"fibra\",\"bw\":\"400\",\"direccion\":\"Cll 8 # 81-02\",\"ciudad\":\"Medellin\",\"telefono\":\"8674452\",\"descripcion\":\"lorem impsum3\"}]}");
+module.exports = JSON.parse("{\"servicios\":[{\"sid\":\"20001\",\"tipo\":\"antiguo\",\"medio\":\"fibra\",\"bw\":\"200\",\"direccion\":\"Cra 7 # 7-07\",\"ciudad\":\"Bogota\",\"telefono\":\"8673333\",\"descripcion\":\"lorem impsum\"},{\"sid\":\"20002\",\"tipo\":\"nuevo\",\"medio\":\"fibra\",\"bw\":\"300\",\"direccion\":\"Cra 5 # 2-02\",\"ciudad\":\"Bogota\",\"telefono\":\"8672122\",\"descripcion\":\"lorem impsum2\"},{\"sid\":\"20003\",\"tipo\":\"nuevo\",\"medio\":\"fibra\",\"bw\":\"400\",\"direccion\":\"Cll 8 # 81-02\",\"ciudad\":\"Medellin\",\"telefono\":\"8674452\",\"descripcion\":\"lorem impsum3\"}]}");
 
 /***/ }),
 

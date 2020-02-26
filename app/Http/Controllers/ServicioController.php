@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Servicio;
 use Illuminate\Http\Request;
 
 class ServicioController extends Controller
-{
+{   
+    public function get_all(){
+        return Servicio::all();
+    }
      /**
      * Display a listing of the resource.
      *
@@ -13,7 +17,7 @@ class ServicioController extends Controller
      */
     public function index()
     {
-        return view('servicio');
+        return view('testhome');
     }
 
     /**

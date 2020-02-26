@@ -2,8 +2,7 @@
     "servicios":[
         {
             "sid": "20001",
-            "servicio":"internet",
-            "tipo":"1",
+            "tipo":"antiguo",
             "medio":"fibra",
             "bw":"200",
             "direccion":"Cra 7 # 7-07",
@@ -14,8 +13,7 @@
         },
         {
             "sid": "20002",
-            "servicio":"telefono",
-            "tipo":"2",
+            "tipo":"nuevo",
             "medio":"fibra",
             "bw":"300",
             "direccion":"Cra 5 # 2-02",
@@ -26,8 +24,7 @@
         },
         {
             "sid": "20003",
-            "servicio":"interne3",
-            "tipo":"3",
+            "tipo":"nuevo",
             "medio":"fibra",
             "bw":"400",
             "direccion":"Cll 8 # 81-02",

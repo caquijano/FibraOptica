@@ -13,3 +13,10 @@ require('./bootstrap');
  */
 
 require('./components/Example');
+require('./components/AprovisionamientoModal');
+require('./components/ElectrificadoraModal');
+require('./components/EquiposModal');
+require('./components/FactibilidadModal');
+require('./components/InstalacionModal');
+require('./components/OportunidadForm');
+require('./components/OportunidadList');

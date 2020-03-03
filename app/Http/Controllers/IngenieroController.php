@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Cliente;
-use App\Empleado;
 use App\Ingeniero;
 use Illuminate\Http\Request;
-use App\Http\Requests;
 
-class EmpleadoController extends Controller
+class IngenieroController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,13 +14,7 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        $empleados = Empleado::all();
-        $clientes = Cliente::all();
-        $ingenieros = Ingeniero::all();
-        return view('createoportunidad', compact('empleados', 'clientes', 'ingenieros'));
-
-        
-
+        //
     }
 
     /**
@@ -33,7 +24,7 @@ class EmpleadoController extends Controller
      */
     public function create()
     {
-       
+        //
     }
 
     /**
@@ -50,10 +41,10 @@ class EmpleadoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Empleado  $empleado
+     * @param  \App\Ingeniero  $ingeniero
      * @return \Illuminate\Http\Response
      */
-    public function show(Empleado $empleado)
+    public function show(Ingeniero $ingeniero)
     {
         //
     }
@@ -61,10 +52,10 @@ class EmpleadoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Empleado  $empleado
+     * @param  \App\Ingeniero  $ingeniero
      * @return \Illuminate\Http\Response
      */
-    public function edit(Empleado $empleado)
+    public function edit(Ingeniero $ingeniero)
     {
         //
     }
@@ -73,10 +64,10 @@ class EmpleadoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Empleado  $empleado
+     * @param  \App\Ingeniero  $ingeniero
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Empleado $empleado)
+    public function update(Request $request, Ingeniero $ingeniero)
     {
         //
     }
@@ -84,10 +75,10 @@ class EmpleadoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Empleado  $empleado
+     * @param  \App\Ingeniero  $ingeniero
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Empleado $empleado)
+    public function destroy(Ingeniero $ingeniero)
     {
         //
     }

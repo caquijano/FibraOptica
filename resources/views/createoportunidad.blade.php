@@ -32,8 +32,13 @@
             <label for="ingeniero_preventa">Ingeniero de preventa</label>
             <select class="custom-select" name="ingeniero_preventa" id="">
                 <option value=""></option>
+<<<<<<< HEAD
                 @foreach ($empleados ?? '' as $empleado)
                  <option value="{{ $empleado['id'] }}">{{ $empleado['nombre'] }}</option>
+=======
+                @foreach ($ingenieros as $ingeniero)
+                 <option value="{{ $ingeniero['id'] }}">{{ $ingeniero['ingeniero'] }}</option>
+>>>>>>> b91262e4fd42370dabd42bc13f0985a2d1a85447
                 @endforeach
             </select>
           </div>
@@ -41,9 +46,11 @@
           <label for="cliente">Cliente</label>
           <div class="input-group">
             <select class="custom-select" name="id_cliente" id="">
-                <option value="1">1</option>
+                <option value=""></option>
+            @foreach ($clientes as $cliente)
+                 <option value="{{ $cliente['id'] }}">{{ $cliente['nombre'] }}</option>
+                @endforeach
             </select>
-            
             <button type="button" class="btn btn-success input-group-text" data-toggle="modal" data-target="#cliente">
                 <i class="far fa fa-user-plus"></i>
             </button>

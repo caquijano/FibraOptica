@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Oportunidad;
+use App\Empleado;
+use App\Ingeniero;
+use Illuminate\Support\Facades\DB;
+use PhpParser\Node\Expr\New_;
 
 class OportunidadController extends Controller
 {
@@ -12,9 +16,21 @@ class OportunidadController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        /** */
+        $consulta = $request->buscarpor;
+        
+        $oportunidads=DB::table('oportunidads')
+        ->join('clientes', 'oportunidads.id_cliente', '=', 'clientes.id')
+        ->join('empleados', 'oportunidads.comercial', '=', 'empleados.id')
+        ->join('ingenieros', 'oportunidads.ingeniero_preventa', '=', 'ingenieros.id')
+        ->select('*', 'clientes.nombre as empresa')
+        ->where('oportunidad', 'like', "$consulta%")
+        ->paginate(6);
+        
+        return view('veroportunidad', compact('oportunidads'));
+   
     }
 
     /**
@@ -22,9 +38,11 @@ class OportunidadController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('createoportunidad');
+        
+
+        
     }
 
     /**
@@ -46,7 +64,7 @@ class OportunidadController extends Controller
         $crearOportunidad->prioridad = $request->prioridad;
         $crearOportunidad->id_cliente = $request->id_cliente;
         $crearOportunidad->save();
-        return back()->with('crearoportunidad', 'La oportunidad se ha creado satisfactoriamente');
+        return redirect('/veroportunidad');
     }
 
     /**
@@ -57,7 +75,8 @@ class OportunidadController extends Controller
      */
     public function show($id)
     {
-        //
+        $oportunidads = Oportunidad::all();
+        return view('veroportunidad', compact('oportunidads'));
     }
 
     /**

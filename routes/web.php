@@ -23,11 +23,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/testhome', 'HomeController@test')->name('testhome');
-Route::get('/test', 'TestController@index')->name('test');
-Route::get('/about', 'TestController@about')->name('about');
-Route::get('/servicio', 'ServicioController@index')->name('servicio');
-Route::get('/nuevaoportunidad', 'OportunidadController@create')->name('nuevaoportunidad');
-Route::post('/createoportunidad', 'OportunidadController@store')->name('createoportunidad');
-Route::post('/agregarcliente', 'ClienteController@store')->name('agregarcliente');
-Route::get('/oportunidad', 'EmpleadoController@index')->name('oportunidad');
+Route::get('/testhome', 'HomeController@test')->name('testhome')->middleware('auth');
+Route::get('/test', 'TestController@index')->name('test')->middleware('auth');
+Route::get('/about', 'TestController@about')->name('about')->middleware('auth');
+Route::get('/servicio', 'ServicioController@index')->name('servicio')->middleware('auth');
+Route::get('/nuevaoportunidad', 'OportunidadController@create')->name('nuevaoportunidad')->middleware('auth');
+Route::post('/createoportunidad', 'OportunidadController@store')->name('createoportunidad')->middleware('auth');
+Route::post('/agregarcliente', 'ClienteController@store')->name('agregarcliente')->middleware('auth');
+Route::get('/oportunidad', 'EmpleadoController@index')->name('oportunidad')->middleware('auth');
+Route::get('/veroportunidad', 'OportunidadController@index')->name('veroportunidad')->middleware('auth');
+

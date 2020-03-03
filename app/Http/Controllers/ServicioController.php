@@ -25,9 +25,41 @@ class ServicioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        Servicio::insert([
+            'sid'=> $request->input('sid'), 
+            'servicio'=> $request->input('servicio'), 
+            'tipo'=> $request->input('tipo'), 
+            'medio'=> $request->input('medio'), 
+            'bw'=> $request->input('bw'), 
+            'direccion'=> $request->input('bw'), 
+            'ciudad'=> $request->input('ciudad'), 
+            'telefono'=> $request->input('telefono'),
+            'descripcion'=> $request->input('descripcion'),
+            'fecha_contratacion'=> $request->input('fecha_contratacion'), 
+            'fecha_proveedor'=> $request->input('fecha_proveedor'), 
+            'fecha_costos'=>$request->input('fecha_costos'),
+            'tiempo_contrato'=> $request->input('tiempo_contrato'),
+            'tercero'=> $request->input('tercero'), 
+            'os'=> $request->input('os'),
+            'mrc_cliente'=> $request->input('mrc_cliente'), 
+            'nrc_cliente'=> $request->input('nrc_cliente'),
+            'inversion_cliente'=> $request->input('inversion_cliente'),
+            'gasto_cliente'=> $request->input('gasto_cliente'),
+            'inversion_tercero'=> $request->input('inversion_tercero'),
+            'gasto_tercero'=> $request->input('gasto_tercero'),
+            'obra_civil'=> $request->input('obra_civil'),
+            'observacion_obra'=> $request->input('observacion_obra'),
+            'fecha_entrega_tercero'=> $request->input('fecha_entrega_tercero'),
+            'id_oportunidad'=> $request->input('id_oportunidad'),
+            'id_suministro'=> $request->input('id_suministro')
+          ]);
+    
+          $response['message'] = "Guardo exitosamente";
+          $response['success'] = true;
+    
+          return $response;
     }
 
     /**
@@ -38,7 +70,7 @@ class ServicioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

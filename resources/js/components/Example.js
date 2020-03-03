@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM, { render } from 'react-dom';
-import  {servicios} from './servicios.json';
+//import  {servicios} from './servicios.json';
 import OportunidadForm from './OportunidadForm';
 
 import FactibilidadModal from './FactibilidadModal';
@@ -24,7 +24,21 @@ class Example extends Component {
         this.setState({
             servicios:[...this.state.servicios, servicio]
         })
+        axios.post(baseUrl+'servicio/create',servicio).then(response=>{
+  
+            if (response.data.success==true) {
+              //alert(response.data.message)
+              // cargar datos de nuevo
+              //this.loadDataProduct()
+            }
+ 
+        }).catch(error=>{
+          alert("Error "+error)
+        })
+
+        console.log(servicio)
     }
+   
     componentDidMount(){
 
         axios.get(baseUrl+'servicio/list').then(response=>{
@@ -48,7 +62,7 @@ class Example extends Component {
                             servicios= {this.state.servicios}
                             />
                     
-                    
+                  
                  </div>
                 <div className="form-group">
                

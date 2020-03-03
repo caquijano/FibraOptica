@@ -68969,41 +68969,41 @@ __webpack_require__.r(__webpack_exports__);
 
 var AprovisionamientoModal = function AprovisionamientoModal() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal fade",
+    className: "modal fade",
     id: "aprovisionamiento",
     "data-backdrop": "static",
-    tabindex: "-1",
+    tabIndex: "-1",
     role: "dialog",
     "aria-labelledby": "staticBackdropLabel",
     "aria-hidden": "true"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-dialog",
+    className: "modal-dialog",
     role: "document"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-content"
+    className: "modal-content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-header"
+    className: "modal-header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    "class": "modal-title",
+    className: "modal-title",
     id: "staticBackdropLabel"
   }, "Aprovisionamiento"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "class": "close",
+    className: "close",
     "data-dismiss": "modal",
     "aria-label": "Close"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     "aria-hidden": "true"
   }, "\xD7"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-body"
+    className: "modal-body"
   }, "..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-footer"
+    className: "modal-footer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "class": "btn btn-secondary",
+    className: "btn btn-secondary",
     "data-dismiss": "modal"
   }, "Close"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "class": "btn btn-primary"
+    className: "btn btn-primary"
   }, "Understood")))));
 };
 
@@ -69022,47 +69022,154 @@ var AprovisionamientoModal = function AprovisionamientoModal() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
-var ElectrificadoraModal = function ElectrificadoraModal() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal fade",
-    id: "electrificadora",
-    "data-backdrop": "static",
-    tabindex: "-1",
-    role: "dialog",
-    "aria-labelledby": "staticBackdropLabel",
-    "aria-hidden": "true"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-dialog",
-    role: "document"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-header"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    "class": "modal-title",
-    id: "staticBackdropLabel"
-  }, "Electrificadora"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    "class": "close",
-    "data-dismiss": "modal",
-    "aria-label": "Close"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    "aria-hidden": "true"
-  }, "\xD7"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-body"
-  }, "..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-footer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    "class": "btn btn-secondary",
-    "data-dismiss": "modal"
-  }, "Close"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    "class": "btn btn-primary"
-  }, "Understood")))));
-};
+
+var ElectrificadoraModal =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ElectrificadoraModal, _Component);
+
+  function ElectrificadoraModal() {
+    _classCallCheck(this, ElectrificadoraModal);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ElectrificadoraModal).apply(this, arguments));
+  }
+
+  _createClass(ElectrificadoraModal, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal fade",
+        id: "electrificadora",
+        "data-backdrop": "static",
+        tabIndex: "-1",
+        role: "dialog",
+        "aria-labelledby": "staticBackdropLabel",
+        "aria-hidden": "true"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-dialog",
+        role: "document"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "modal-title",
+        id: "staticBackdropLabel"
+      }, "Electrificadora"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "close",
+        "data-dismiss": "modal",
+        "aria-label": "Close"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        "aria-hidden": "true"
+      }, "\xD7"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row mb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        className: "form-control",
+        style: {
+          width: '450px',
+          height: '100px'
+        }
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-11"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "_30w2 clearfix"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        "class": "custom-select my-1 mr-sm-2",
+        id: "inlineFormCustomSelectPref"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        selected: true
+      }, "N/A"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "1"
+      }, "solicitud enviada"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "2"
+      }, "Atrazado"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "3"
+      }, "Re-programar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "3"
+      }, "Aprobado")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        "for": "start"
+      }, " Alerta "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        name: "formulario",
+        method: "post",
+        action: "http://pagina.com/send.php"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "date",
+        name: "fecha",
+        min: "2019-01-01",
+        max: "2025-05-25",
+        step: "2"
+      }), "hora:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "time",
+        name: "hora",
+        min: "8:00",
+        max: "17:00",
+        step: "3600"
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "form-group col-xs-12 col-sm-6 col-md-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        "for": "banner"
+      }, "Banner:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "input-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        "class": "input-group-btn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        "class": "btn btn-primary btn-file"
+      }, "Banner ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        accept: ".jpg,.png,.jpeg,.gif",
+        "class": "hidden",
+        name: "banner",
+        type: "file",
+        id: "banner"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "form-control",
+        id: "banner_captura",
+        readonly: "readonly",
+        name: "banner_captura",
+        type: "text",
+        value: ""
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-footer"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-secondary",
+        "data-dismiss": "modal"
+      }, "Salir"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-primary"
+      }, "Agendar")))));
+    }
+  }]);
+
+  return ElectrificadoraModal;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (ElectrificadoraModal);
 
@@ -69083,41 +69190,41 @@ __webpack_require__.r(__webpack_exports__);
 
 var EquiposModal = function EquiposModal() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal fade",
+    className: "modal fade",
     id: "equipos",
     "data-backdrop": "static",
-    tabindex: "-1",
+    tabIndex: "-1",
     role: "dialog",
     "aria-labelledby": "staticBackdropLabel",
     "aria-hidden": "true"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-dialog",
+    className: "modal-dialog",
     role: "document"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-content"
+    className: "modal-content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-header"
+    className: "modal-header"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    "class": "modal-title",
+    className: "modal-title",
     id: "staticBackdropLabel"
   }, "Equipos"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "class": "close",
+    className: "close",
     "data-dismiss": "modal",
     "aria-label": "Close"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     "aria-hidden": "true"
   }, "\xD7"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-body"
+    className: "modal-body"
   }, "..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "modal-footer"
+    className: "modal-footer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "class": "btn btn-secondary",
+    className: "btn btn-secondary",
     "data-dismiss": "modal"
   }, "Close"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    "class": "btn btn-primary"
+    className: "btn btn-primary"
   }, "Understood")))));
 };
 
@@ -69138,15 +69245,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _servicios_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./servicios.json */ "./resources/js/components/servicios.json");
-var _servicios_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./servicios.json */ "./resources/js/components/servicios.json", 1);
-/* harmony import */ var _OportunidadForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./OportunidadForm */ "./resources/js/components/OportunidadForm.js");
-/* harmony import */ var _FactibilidadModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FactibilidadModal */ "./resources/js/components/FactibilidadModal.js");
-/* harmony import */ var _ElectrificadoraModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ElectrificadoraModal */ "./resources/js/components/ElectrificadoraModal.js");
-/* harmony import */ var _EquiposModal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./EquiposModal */ "./resources/js/components/EquiposModal.js");
-/* harmony import */ var _InstalacionModal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./InstalacionModal */ "./resources/js/components/InstalacionModal.js");
-/* harmony import */ var _AprovisionamientoModal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./AprovisionamientoModal */ "./resources/js/components/AprovisionamientoModal.js");
-/* harmony import */ var _OportunidadList_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./OportunidadList.js */ "./resources/js/components/OportunidadList.js");
+/* harmony import */ var _OportunidadForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./OportunidadForm */ "./resources/js/components/OportunidadForm.js");
+/* harmony import */ var _FactibilidadModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FactibilidadModal */ "./resources/js/components/FactibilidadModal.js");
+/* harmony import */ var _ElectrificadoraModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ElectrificadoraModal */ "./resources/js/components/ElectrificadoraModal.js");
+/* harmony import */ var _EquiposModal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EquiposModal */ "./resources/js/components/EquiposModal.js");
+/* harmony import */ var _InstalacionModal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./InstalacionModal */ "./resources/js/components/InstalacionModal.js");
+/* harmony import */ var _AprovisionamientoModal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./AprovisionamientoModal */ "./resources/js/components/AprovisionamientoModal.js");
+/* harmony import */ var _OportunidadList_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./OportunidadList.js */ "./resources/js/components/OportunidadList.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
@@ -69174,7 +69279,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
-
+ //import  {servicios} from './servicios.json';
 
 
 
@@ -69210,6 +69315,15 @@ function (_Component) {
       this.setState({
         servicios: [].concat(_toConsumableArray(this.state.servicios), [servicio])
       });
+      axios.post(baseUrl + 'servicio/create', servicio).then(function (response) {
+        if (response.data.success == true) {//alert(response.data.message)
+          // cargar datos de nuevo
+          //this.loadDataProduct()
+        }
+      })["catch"](function (error) {
+        alert("Error " + error);
+      });
+      console.log(servicio);
     }
   }, {
     key: "componentDidMount",
@@ -69229,11 +69343,11 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "Example"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OportunidadList_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OportunidadList_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
         onAddServicio: this.handleAddServicio
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OportunidadForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OportunidadForm__WEBPACK_IMPORTED_MODULE_2__["default"], {
         servicios: this.state.servicios
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
@@ -69264,7 +69378,7 @@ function (_Component) {
         className: "btn list-group-item",
         "data-toggle": "modal",
         "data-target": "#aprovisionamiento"
-      }, " Aprovisionamiento")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FactibilidadModal__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ElectrificadoraModal__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EquiposModal__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InstalacionModal__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AprovisionamientoModal__WEBPACK_IMPORTED_MODULE_8__["default"], null)));
+      }, " Aprovisionamiento")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FactibilidadModal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ElectrificadoraModal__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EquiposModal__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InstalacionModal__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AprovisionamientoModal__WEBPACK_IMPORTED_MODULE_7__["default"], null)));
     }
   }]);
 
@@ -69290,47 +69404,127 @@ if (document.getElementById('example')) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
-var FactibilidadModal = function FactibilidadModal() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal fade",
-    id: "factibilidad",
-    "data-backdrop": "static",
-    tabindex: "-1",
-    role: "dialog",
-    "aria-labelledby": "staticBackdropLabel",
-    "aria-hidden": "true"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal-dialog",
-    role: "document"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal-content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal-header"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    className: "modal-title",
-    id: "staticBackdropLabel"
-  }, "Modal title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    className: "close",
-    "data-dismiss": "modal",
-    "aria-label": "Close"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    "aria-hidden": "true"
-  }, "\xD7"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal-body"
-  }, "..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal-footer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    className: "btn btn-secondary",
-    "data-dismiss": "modal"
-  }, "Close"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    className: "btn btn-primary"
-  }, "Understood")))));
+
+var getRemainTime = function getRemainTime(deadline) {
+  var now = new Date(),
+      remainTime = (new Date(deadline) - now + 1000) / 1000,
+      remainSeconds = ('0' + Math.floor(remainTime % 60)).slice(-2),
+      remainMinutes = ('0' + Math.floor(remainTime / 60 % 60)).slice(-2),
+      remainHours = ('0' + Math.floor(remainTime / 3600 % 24)).slice(-2),
+      remainDays = Math.floor(remainTime / (3600 * 24));
+  return {
+    remainTime: remainTime,
+    remainSeconds: remainSeconds,
+    remainMinutes: remainMinutes,
+    remainHours: remainHours,
+    remainDays: remainDays
+  };
 };
+/*
+const countdown = (deadline, elem, finalMessage) => {
+    const el = document.getElementById(elem);
+
+    const timerUpdate = setInterval( ()=> {
+        let t = getRemainTime(deadline);
+        
+       // el = `${t.remainDays}d:${t.remainHours}h:${t.remainMinutes}m:${t.remainSeconds}s`;
+
+        if (t.remainTime <= 1){
+            clearInterval(timerUpdate)
+            //el.innerHTML = finalMessage;
+            con
+        }
+    }, 1000);
+
+};
+console.log(countdown('Feb 28 2020 23:52:27 GMT-0500', 'clock','tiempo agotado'))
+*/
+//console.log(getRemainTime('Feb 27 2020 11:29:42 GMT-0500'));
+
+
+var FactibilidadModal =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(FactibilidadModal, _Component);
+
+  function FactibilidadModal() {
+    _classCallCheck(this, FactibilidadModal);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(FactibilidadModal).apply(this, arguments));
+  }
+
+  _createClass(FactibilidadModal, [{
+    key: "handleSubmit",
+    value: function handleSubmit() {
+      console.log(getRemainTime('Feb 27 2020 11:33:42 GMT-0500'));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal fade",
+        id: "factibilidad",
+        "data-backdrop": "static",
+        tabIndex: "-1",
+        role: "dialog",
+        "aria-labelledby": "staticBackdropLabel",
+        "aria-hidden": "true"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-dialog",
+        role: "document"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "modal-title",
+        id: "staticBackdropLabel"
+      }, "Modal title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "close",
+        "data-dismiss": "modal",
+        "aria-label": "Close"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        "aria-hidden": "true"
+      }, "\xD7"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "clock"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-footer"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-secondary",
+        "data-dismiss": "modal"
+      }, "Close"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-primary",
+        onClick: this.handleSubmit
+      }, "Understood")))));
+    }
+  }]);
+
+  return FactibilidadModal;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (FactibilidadModal);
 
@@ -69354,7 +69548,7 @@ var InstalacionModal = function InstalacionModal() {
     className: "modal fade",
     id: "instalacion",
     "data-backdrop": "static",
-    tabindex: "-1",
+    tabIndex: "-1",
     role: "dialog",
     "aria-labelledby": "staticBackdropLabel",
     "aria-hidden": "true"
@@ -69409,7 +69603,7 @@ __webpack_require__.r(__webpack_exports__);
 var OportunidadForm = function OportunidadForm(_ref) {
   var servicios = _ref.servicios;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
-    className: "container col-sm-11 align-content-center"
+    className: "container col-sm-11 align-content-center "
   }, servicios.map(function (servicio) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "card"
@@ -69417,16 +69611,20 @@ var OportunidadForm = function OportunidadForm(_ref) {
       className: "row"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "col-sm-1"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "row"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: "images/SinFoto.jpg",
+      src: "images/fibra.jpg",
       className: "card-img-top",
       alt: ""
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "badge badge-danger navbar-badge"
-    }, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, "1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "row"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       type: "button",
-      "class": "btn btn-success"
-    }, "Success")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "btn btn-success"
+    }, "Success"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "col-sm-3"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
       className: "card-title"
@@ -69434,23 +69632,27 @@ var OportunidadForm = function OportunidadForm(_ref) {
       className: "card-text"
     }, "Opotunidad: 20802 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "col-sm-2"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
       className: "card-text "
-    }, servicio.sid, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    }, "Sid: ", servicio.sid, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
       className: "card-text"
     }, "Tipo: ", servicio.tipo, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "col-sm-3"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
       className: "card-text"
     }, "Ciudad: ", servicio.ciudad), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-      className: "card-title"
+      className: "card-text"
     }, "Direccion: ", servicio.direccion, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "col-sm-3"
+      className: "col-sm-2"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
       className: "card-text"
     }, "Telefono: ", servicio.telefono, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
       className: "card-text"
-    }, " BW: ", servicio.bw, " Medio:", servicio.medio))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, " BW: ", servicio.bw, " Medio:", servicio.medio)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "col-sm-1 m-auto"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "btn btn-info"
+    }, "Editar"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "progress"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "progress-bar",
@@ -69515,13 +69717,32 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(OportunidadList).call(this));
     _this.state = {
       sid: '',
+      servicio: 'internet',
       tipo: '',
       medio: '',
       bw: '',
       direccion: '',
       ciudad: '',
       telefono: '',
-      descripcion: 'lorem'
+      descripcion: '',
+      fecha_contratacion: '2020-02-26',
+      //factibilidad
+      fecha_proveedor: '2020-02-26',
+      fecha_costos: '2020-02-26',
+      tiempo_contrato: 200,
+      tercero: 'carlos',
+      os: 'os',
+      mrc_cliente: 200,
+      nrc_cliente: 200,
+      inversion_cliente: 200,
+      gasto_cliente: 200,
+      inversion_tercero: 200,
+      gasto_tercero: 200,
+      obra_civil: 200,
+      observacion_obra: 'obra',
+      fecha_entrega_tercero: '2020-02-26',
+      id_oportunidad: 1,
+      id_suministro: 1
     };
     _this.handleInputChange = _this.handleInputChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -69546,12 +69767,14 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "card",
+        className: "container-sm p-3 my-3 border bg-dark",
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row m-2"
+        className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-sm-1"
+        className: "row col-sm-11"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group col-sm-2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "images/SinFoto.jpg",
         className: "card-img-top",
@@ -69561,64 +69784,76 @@ function (_Component) {
       }, "3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group col-sm-2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+        className: "row mt-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         className: ""
       }, "Profamilia")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-        className: ""
+        className: "aling-text-center"
       }, "Opotunidad: 20802 "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group col-sm-2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "card-title"
+      }, "SID: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "sid",
         className: "form-control",
         placeholder: "SID",
         onChange: this.handleInputChange
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row mt-1"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "card-title"
+      }, "Tipo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "",
         name: "tipo",
         className: "form-control",
         placeholder: "Tipo",
         onChange: this.handleInputChange
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group col-sm-2 ml-2"
+        className: "form-group col-sm-2 ml-1 "
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "card-title"
+      }, "Ciudad"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "ciudad",
         className: "form-control",
         placeholder: "Ciudad",
         onChange: this.handleInputChange
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row mt-1"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "card-title"
+      }, "Direccion"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "direccion",
         className: "form-control",
         placeholder: "Direccion",
         onChange: this.handleInputChange
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group col-sm-3"
+        className: "form-group col-sm-2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "card-title"
+      }, "Telefono:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "telefono",
         className: "form-control",
         placeholder: "Telefono",
         onChange: this.handleInputChange
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row mt-1"
+        className: "row mt"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "card-title"
+      }, "BW"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "bw",
         className: "form-control",
@@ -69626,27 +69861,22 @@ function (_Component) {
         onChange: this.handleInputChange
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "card-title"
+      }, "medio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         name: "medio",
         className: "form-control",
         placeholder: "Medio",
         onChange: this.handleInputChange
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group col-sm-1 "
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row col-sm-1"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row ml-1"
+        className: "row m-auto"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         className: "btn btn-primary mb-2"
-      }, "+")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row ml-1"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "submit",
-        className: "btn"
-      }, "Crear")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row accent-danger"
-      }));
+      }, "+")))));
     }
   }]);
 
@@ -69654,17 +69884,6 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (OportunidadList);
-
-/***/ }),
-
-/***/ "./resources/js/components/servicios.json":
-/*!************************************************!*\
-  !*** ./resources/js/components/servicios.json ***!
-  \************************************************/
-/*! exports provided: servicios, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"servicios\":[{\"sid\":\"20001\",\"tipo\":\"antiguo\",\"medio\":\"fibra\",\"bw\":\"200\",\"direccion\":\"Cra 7 # 7-07\",\"ciudad\":\"Bogota\",\"telefono\":\"8673333\",\"descripcion\":\"lorem impsum\"},{\"sid\":\"20002\",\"tipo\":\"nuevo\",\"medio\":\"fibra\",\"bw\":\"300\",\"direccion\":\"Cra 5 # 2-02\",\"ciudad\":\"Bogota\",\"telefono\":\"8672122\",\"descripcion\":\"lorem impsum2\"},{\"sid\":\"20003\",\"tipo\":\"nuevo\",\"medio\":\"fibra\",\"bw\":\"400\",\"direccion\":\"Cll 8 # 81-02\",\"ciudad\":\"Medellin\",\"telefono\":\"8674452\",\"descripcion\":\"lorem impsum3\"}]}");
 
 /***/ }),
 

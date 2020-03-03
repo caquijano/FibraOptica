@@ -23,7 +23,7 @@
             <label for="comercial">Comercial</label>
             <select class="custom-select" name="comercial" id="">
                 <option value=""></option>
-                @foreach ($empleados as $empleado)
+                @foreach ($empleados ?? '' as $empleado)
                  <option value="{{ $empleado['id'] }}">{{ $empleado['nombre'] }}</option>
                 @endforeach
             </select>
@@ -32,7 +32,7 @@
             <label for="ingeniero_preventa">Ingeniero de preventa</label>
             <select class="custom-select" name="ingeniero_preventa" id="">
                 <option value=""></option>
-                @foreach ($empleados as $empleado)
+                @foreach ($empleados ?? '' as $empleado)
                  <option value="{{ $empleado['id'] }}">{{ $empleado['nombre'] }}</option>
                 @endforeach
             </select>

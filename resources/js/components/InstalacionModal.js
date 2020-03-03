@@ -2,7 +2,7 @@ import React from 'react'
 
 const InstalacionModal = () => (
 
-    <div className="modal fade" id="instalacion" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div className="modal fade" id="instalacion" data-backdrop="static" tabIndex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div className="modal-dialog" role="document">
         <div className="modal-content">
         <div className="modal-header">

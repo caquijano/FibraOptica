@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Oportunidad;
 use App\Servicio;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class ServicioController extends Controller
 {   
     public function get_all(){
@@ -15,9 +15,15 @@ class ServicioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('testhome');
+        $consulta = $request->enviaroportunidad;
+        $oportunidads=DB::table('oportunidads')
+        ->select('oportunidad')
+        ->where('id', 'like', "%$consulta%")
+        ->get();
+
+        return view('testhome', compact('oportunidads'));
     }
 
     /**

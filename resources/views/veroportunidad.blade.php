@@ -1,8 +1,8 @@
 @extends('layouts.admin')
 @section('content')
 
-<div class="row">
-    <div class="card">
+<div class="row col-sm-12">
+    <div class="card col-sm-12">
         <nav class="navbar navbar-light bg-light justify-content-between">
             <h3 class="">Oportunidades</h3>
             {!! Form::open(['route' => ['veroportunidad'], 'method' => 'GET', 'class' => 'navbar-form-pull-right']) !!}
@@ -39,11 +39,14 @@
             <h5 class="card-text">Preventa: {{ $oportunidad->ingeniero }}  </h5>
         </div>
     </div>
-    <div class="row col-sm-1 align-content-center">
-        
-        <a class="fa fa-plus-square" href="/servicio" style="font-size:30px;color:green"></a>
-        
+    
+    <div class="input-group row col-sm-1 align-content-center">
+        {!! Form::open(['route' => ['servicio'], 'method' => 'GET', 'class' => 'navbar-form-pull-right']) !!}
+        {!! Form::hidden('enviaroportunidad',$oportunidad->numerooportunidad , ['class' => 'form-group form-control', 'aria-describedby' => 'enviaroportunidad']) !!}
+        <button class="fa fa-plus-square btn btn-link" href="/servicio" id="enviaroportunidad" style="font-size:30px;color:green"></button>
+        {!! Form::close() !!}  
     </div>
+  
 </div>
     </div>
     

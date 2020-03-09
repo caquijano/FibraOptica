@@ -32,13 +32,8 @@
             <label for="ingeniero_preventa">Ingeniero de preventa</label>
             <select class="custom-select" name="ingeniero_preventa" id="">
                 <option value=""></option>
-<<<<<<< HEAD
-                @foreach ($empleados ?? '' as $empleado)
-                 <option value="{{ $empleado['id'] }}">{{ $empleado['nombre'] }}</option>
-=======
                 @foreach ($ingenieros as $ingeniero)
                  <option value="{{ $ingeniero['id'] }}">{{ $ingeniero['ingeniero'] }}</option>
->>>>>>> b91262e4fd42370dabd42bc13f0985a2d1a85447
                 @endforeach
             </select>
           </div>

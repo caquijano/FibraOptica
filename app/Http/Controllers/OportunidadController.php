@@ -25,9 +25,9 @@ class OportunidadController extends Controller
         ->join('clientes', 'oportunidads.id_cliente', '=', 'clientes.id')
         ->join('empleados', 'oportunidads.comercial', '=', 'empleados.id')
         ->join('ingenieros', 'oportunidads.ingeniero_preventa', '=', 'ingenieros.id')
-        ->select('*', 'clientes.nombre as empresa')
+        ->select('*', 'clientes.nombre as empresa', 'oportunidads.id as numerooportunidad')
         ->where('oportunidad', 'like', "$consulta%")
-        ->paginate(6);
+        ->paginate(5);
         
         return view('veroportunidad', compact('oportunidads'));
    
